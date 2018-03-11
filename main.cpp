@@ -20,10 +20,15 @@ int main(){
   keypad(stdscr, true);
   timeout(500);
   int yMax, xMax, userInput;
+  string nombre = "Enrique";
   getmaxyx(stdscr, yMax, xMax);
 
   WINDOW* playfield = newwin(12, 12, yMax/12, xMax/12);
   box(playfield, 0, 0);
+  refresh();
+  wrefresh(playfield);
+
+  Jugador* juga = new Jugador(playfield, nombre, true, 1);
 
   do {
     /* code */
