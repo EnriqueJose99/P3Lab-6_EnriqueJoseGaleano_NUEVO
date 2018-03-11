@@ -17,7 +17,7 @@ public:
   bool estadoVM;
   int tipoDeControlador;
   int yMax;
-  int xMAx;
+  int xMax;
   int size;
   int xLast;
   int yLast;

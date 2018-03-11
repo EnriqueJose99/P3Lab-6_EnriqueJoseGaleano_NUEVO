@@ -16,7 +16,7 @@ Jugador::Jugador(WINDOW* currwin, string pNombre, bool pEstadoVM, int pTipoDeCon
   size = 2;
   xLast = 1;
   yLast = 0;
-  getmaxyx(currwin, yMax, xMAx);
+  getmaxyx(currwin, yMax, xMax);
 
 }
 
@@ -66,7 +66,7 @@ bool Jugador::moveRight(){
 
 void Jugador::display(){
   for (int i = 0; i < size; i++) {
-    mvaddch(currwin, bomberMan[i][0] - '0', bomberMan[1][2] - '0', '^');
+    mvwaddch(currwin, bomberMan[i][0] - '0', bomberMan[1][2] - '0', '^');
   }
 }
 
@@ -74,7 +74,7 @@ int Jugador::getXLast(){
   return xLast;
 }
 int Jugador::getYLast(){
-  return YLast;
+  return yLast;
 }
 
 void Jugador::setNombre(string pNombre){
