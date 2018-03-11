@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <ncruses.h>
+#include <ncurses.h>
 #include "items.h"
 
 #ifndef JUGADOR_H

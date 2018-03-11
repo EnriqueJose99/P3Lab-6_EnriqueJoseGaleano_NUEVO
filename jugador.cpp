@@ -8,12 +8,12 @@ Jugador::Jugador(){
 
 }
 Jugador::Jugador(WINDOW* currwin, string pNombre, bool pEstadoVM, int pTipoDeControlador):Items(x,y){
-  this->currin = currwin;
+  this->currwin = currwin;
   nombre = pNombre;
   estadoVM = pEstadoVM;
   tipoDeControlador = pTipoDeControlador;
 
-  getmaxyx(yMax, xMAx);
+  getmaxyx(currwin, yMax, xMAx);
 
 }
 

@@ -8,16 +8,28 @@
 #include "tren.h"
 #include "v.h"
 #include <ncurses.h>
+#include <ctime>
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
 
 int main(){
   initscr();
-  printw("Hola Mundo, ");
-  printw("Como estas?, ");
-  printw("Hay herencia, ");
-  printw("Estan las clase y la matriz.");
+  noecho();
+  keypad(stdscr, true);
+  timeout(500);
+  int yMax, xMax, userInput;
+  getmaxyx(stdscr, yMax, xMax);
+
+  WINDOW* playfield = newwin(12, 12, yMax/12, xMax/12);
+  box(playfield, 0, 0);
+
+  do {
+    /* code */
+    move(12, 36);
+    printw("Game over aprete q");
+  } while(getch() != 'q');
   refresh();
   getch();
   endwin();
